@@ -33,7 +33,8 @@ RUN apt-get install -y powershell
     # Start PowerShell
     #pwsh
 
-
+# Install Az PowerShell module
+RUN pwsh -Command "Install-Module -Name Az -Scope AllUsers -Force -AllowClobber"
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
